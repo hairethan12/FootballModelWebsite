@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "MAr7jDDWsM/vpv2nFgB13WR3OB2O9x+1xGiMhXCrDqo=",
+  "Source": "FootballAnalytics.API",
+  "BasePath": "_content/FootballAnalytics.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
