@@ -50,24 +50,21 @@ const OpponentAnalysis = ({ game }: OpponentAnalysisProps) => {
   const handleSubmit = async () => {
     const requestBody = {
       period: Number(formData.period),
-      clock: formData.clock_seconds,
+      clock_sec: formData.clock_seconds,
       offenseScore: Number(formData.offense_score),
       defenseScore: Number(formData.defense_score),
-      yardsToGoal: Number(formData.yards_to_goal),
+      yards_to_goal: Number(formData.yards_to_goal),
       down: Number(formData.down),
       distance: Number(formData.distance),
       playType: formData.play_type,
     };
 
     try {
-      const response = await fetch(
-        "https://opponent-api.onrender.com/predict",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      const response = await fetch("https://opponent-api.onrender.com/score", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      });
 
       const data = await response.json();
       console.log("API Response:", data);
